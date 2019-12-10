@@ -1,0 +1,44 @@
+strategy: min
+
+source https://api.nuget.org/v3/index.json
+source http://teamcity02.ad.mea.energy/guestAuth/app/nuget/feed/GasDayIO/GasDayIO/v2
+
+nuget FSharp.Collections.ParallelSeq
+nuget Microsoft.SqlServer.SqlManagementObjects
+nuget edtFTPnet-PRO 9.1.2
+nuget EntityFramework 6.2.0
+nuget ExcelDataReader 2.1.2.3
+nuget FsCheck 2.10.4
+nuget FSharp.Core >= 4.6.2
+nuget fsharpx.collections 1.17.0
+nuget fsharpx.extras 2.2.1
+nuget GasDay.IO
+nuget Ifp.PatternMatching 1.0.0
+nuget LanguageExt.Core 1.9.2
+nuget LanguageExt.FSharp 1.9.2
+nuget Linqed 1.0.6
+nuget MathNet.Numerics 4.5.1
+nuget MathNet.Numerics.FSharp 4.5.1
+nuget microsoft.net.test.sdk 15.5.0
+nuget Moq 4.7.145
+nuget morelinq 3.0.0
+nuget mstest.TestAdapter 1.2.0
+nuget mstest.TestFramework 1.2.0
+nuget newtonsoft.json
+nuget NodaTime 2.4.1
+nuget NuGet.CommandLine
+nuget nunit 3.9.0
+nuget NUnit.Console 3.7.0
+nuget nunit3TestAdapter 3.9.0
+nuget SafetyFirst 3.1.0
+nuget SafetyFirst.Strict 1.1.0
+nuget System.Data.SQLite 1.0.106.0
+nuget System.Interactive 3.2.0
+nuget System.Reactive 4.1.2
+nuget System.Reactive.Core 4.1.2
+nuget System.Reactive.Interfaces 4.1.2
+nuget System.Reactive.Linq 4.1.2
+nuget System.Reactive.PlatformServices 4.1.2
+nuget System.Threading.Tasks.Extensions 4.5.1
+nuget System.ValueTuple 4.5.0
+nuget unquote 4.0.0

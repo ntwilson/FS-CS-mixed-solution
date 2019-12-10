@@ -1,0 +1,16 @@
+FsCheck
+FSharp.Core
+FSharp.Collections.ParallelSeq
+LanguageExt.Core
+MathNet.Numerics
+MathNet.Numerics.FSharp
+microsoft.net.test.sdk
+moq
+newtonsoft.json
+NodaTime
+nunit
+NUnit.Console
+nunit3TestAdapter
+SafetyFirst
+system.valueTuple
+unquote

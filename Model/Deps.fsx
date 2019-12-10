@@ -1,0 +1,8 @@
+﻿#r "bin/Debug/net471/Corefs.dll"
+#r "bin/Debug/net471/Core.dll"
+#r "bin/Debug/net471/Data.Core.dll"
+#r "bin/Debug/net471/Data.Structures.dll"
+#r "bin/Debug/net471/DatabaseAccess.Core.dll"
+#r "bin/Debug/net471/DatabaseAccess.Schema.dll"
+#r "bin/Debug/net471/GasDayModel.dll"
+#r "bin/Debug/net471/Model.dll"

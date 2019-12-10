@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net471</TargetFramework>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <DocumentationFile>bin\$(Configuration)\net471\$(AssemblyName).XML</DocumentationFile>
+    <DisableImplicitFSharpCoreReference>true</DisableImplicitFSharpCoreReference>
+    <DisableImplicitSystemValueTupleReference>true</DisableImplicitSystemValueTupleReference>
+    <Deterministic>false</Deterministic>
+    <Platforms>AnyCPU;x86</Platforms>
+  </PropertyGroup>
+  <!-- AutoGenerateBindingRedirects doesn't normally work with projects besides .exes.  See https://github.com/Microsoft/msbuild/issues/1310 -->
+  <Target Name="ForceGenerationOfBindingRedirects" AfterTargets="ResolveAssemblyReferences" BeforeTargets="GenerateBindingRedirects" Condition="'$(AutoGenerateBindingRedirects)' == 'true'">
+    <PropertyGroup>
+      <!-- Needs to be set in a target because it has to be set after the initial evaluation in the common targets -->
+      <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+    </PropertyGroup>
+  </Target>
+  <ItemGroup>
+    <Compile Include="Lib.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core.Time\Core.Time.fsproj" />
+    <ProjectReference Include="..\Corefs\Corefs.fsproj" />
+    <ProjectReference Include="..\Core.Collections\Core.Collections.fsproj" />
+    <ProjectReference Include="..\DatabaseAccess.Loaders\DatabaseAccess.Loaders.fsproj" />
+  </ItemGroup>
+  <Import Project="..\.paket\Paket.Restore.targets" />
+</Project>

@@ -1,0 +1,8 @@
+EntityFramework
+LanguageExt.Core
+Linqed
+microsoft.net.test.sdk
+moq
+newtonsoft.json
+NodaTime
+system.valueTuple

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net471</TargetFramework>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <VS_INSTALL_DIR Condition=" '$(VS_INSTALL_DIR)' == '' ">C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional</VS_INSTALL_DIR>
+    <DocumentationFile>bin\$(Configuration)\net471\$(AssemblyName).XML</DocumentationFile>
+    <NoWarn>1591;1573</NoWarn>
+    <!-- warns when a public member is missing an XML comment, warns when some params have XML comments and others don't -->
+    <IsTestProject>true</IsTestProject>
+    <Platforms>AnyCPU;x86</Platforms>
+  </PropertyGroup>
+
+  <!-- AutoGenerateBindingRedirects doesn't normally work with projects besides .exes.  See https://github.com/Microsoft/msbuild/issues/1310 -->
+  <Target Name="ForceGenerationOfBindingRedirects" AfterTargets="ResolveAssemblyReferences" BeforeTargets="GenerateBindingRedirects" Condition="'$(AutoGenerateBindingRedirects)' == 'true'">
+    <PropertyGroup>
+      <!-- Needs to be set in a target because it has to be set after the initial evaluation in the common targets -->
+      <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+    </PropertyGroup>
+  </Target>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Corefs\Corefs.fsproj" />
+    <ProjectReference Include="..\Core\Core.csproj" />
+    <ProjectReference Include="..\Core.Time\Core.Time.fsproj" />
+    <ProjectReference Include="..\Data.Core\Data.Core.csproj" />
+    <ProjectReference Include="..\Data.Structures\Data.Structures.fsproj" />
+    <ProjectReference Include="..\DatabaseAccess.Core\DatabaseAccess.Core.csproj" />
+    <ProjectReference Include="..\DatabaseAccess.Loaders\DatabaseAccess.Loaders.fsproj" />
+    <ProjectReference Include="..\GasDayFramework\GasDayFramework.csproj" />
+    <ProjectReference Include="..\GasDayFrameworkIntegrationTests\GasDayFrameworkIntegrationTests.csproj" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc" Version="12.0.0.0" HintPath="$(VS_INSTALL_DIR)\Common7\IDE\Extensions\Microsoft\SQLCommon\140\Microsoft.SqlServer.Management.Sdk.Sfc.dll" />
+    <Reference Include="Microsoft.SqlServer.Smo" Version="12.0.0.0" HintPath="$(VS_INSTALL_DIR)\Common7\IDE\Extensions\Microsoft\SQLCommon\140\Microsoft.SqlServer.Smo.dll" />
+    <Reference Include="Microsoft.SqlServer.SmoExtended" Version="12.0.0.0" HintPath="$(VS_INSTALL_DIR)\Common7\IDE\Extensions\Microsoft\SQLCommon\140\Microsoft.SqlServer.SmoExtended.dll" />
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo" Version="12.0.0.0" HintPath="$(VS_INSTALL_DIR)\Common7\IDE\Extensions\Microsoft\SQLCommon\140\Microsoft.SqlServer.ConnectionInfo.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
+  </ItemGroup>
+  <Import Project="..\.paket\Paket.Restore.targets" />
+</Project>

@@ -1,0 +1,9 @@
+FSharp.Core
+microsoft.net.test.sdk
+NodaTime
+nunit
+NUnit.Console
+nunit3TestAdapter
+SafetyFirst
+system.valueTuple
+unquote

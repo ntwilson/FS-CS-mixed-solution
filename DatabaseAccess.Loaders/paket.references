@@ -1,0 +1,17 @@
+EntityFramework
+FsCheck
+FSharp.Core
+fsharpx.extras
+GasDay.IO
+LanguageExt.Core
+microsoft.net.test.sdk
+Moq
+morelinq
+newtonsoft.json
+NodaTime
+nunit
+NUnit.Console
+nunit3TestAdapter
+SafetyFirst
+system.valueTuple
+unquote

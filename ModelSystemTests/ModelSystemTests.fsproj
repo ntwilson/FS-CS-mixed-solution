@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net471</TargetFramework>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <DocumentationFile>bin\$(Configuration)\net471\$(AssemblyName).XML</DocumentationFile>
+    <DisableImplicitFSharpCoreReference>true</DisableImplicitFSharpCoreReference>
+    <DisableImplicitSystemValueTupleReference>true</DisableImplicitSystemValueTupleReference>
+    <Deterministic>false</Deterministic>
+    <Platforms>AnyCPU;x86</Platforms>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.fs" />
+    <Content Include="paket.references" />
+    <Compile Include="Lib.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Corefs\Corefs.fsproj" />
+    <ProjectReference Include="..\Core\Core.csproj" />
+    <ProjectReference Include="..\Data.Core\Data.Core.csproj" />
+    <ProjectReference Include="..\Data.Structures\Data.Structures.fsproj" />
+    <ProjectReference Include="..\DatabaseAccess.Core\DatabaseAccess.Core.csproj" />
+    <ProjectReference Include="..\GasDayFramework\GasDayFramework.csproj" />
+    <ProjectReference Include="..\Core.Collections\Core.Collections.fsproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <Import Project="..\.paket\Paket.Restore.targets" />
+</Project>

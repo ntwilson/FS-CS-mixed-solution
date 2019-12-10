@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net471</TargetFramework>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <LangVersion>latest</LangVersion>
+    <DocumentationFile>bin\$(Configuration)\net471\$(AssemblyName).XML</DocumentationFile>
+    <NoWarn>1591;1573</NoWarn>
+    <!-- warns when a public member is missing an XML comment, warns when some params have XML comments and others don't -->
+    <VS_INSTALL_DIR Condition=" '$(VS_INSTALL_DIR)' == '' ">C:\Program Files (x86)\Microsoft Visual Studio\2017\Community</VS_INSTALL_DIR>
+    <DebugType>full</DebugType>
+    <IsTestProject>true</IsTestProject>
+    <Platforms>AnyCPU;x86</Platforms>
+  </PropertyGroup>
+
+  <!-- AutoGenerateBindingRedirects doesn't normally work with projects besides .exes.  See https://github.com/Microsoft/msbuild/issues/1310 -->
+  <Target Name="ForceGenerationOfBindingRedirects"
+          AfterTargets="ResolveAssemblyReferences"
+          BeforeTargets="GenerateBindingRedirects"
+          Condition="'$(AutoGenerateBindingRedirects)' == 'true'">
+    <PropertyGroup>
+      <!-- Needs to be set in a target because it has to be set after the initial evaluation in the common targets -->
+      <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+    </PropertyGroup>
+  </Target>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Corefs\Corefs.fsproj" />
+    <ProjectReference Include="..\Core\Core.csproj" />
+    <ProjectReference Include="..\CsvWriter\CsvWriter.fsproj" />
+    <ProjectReference Include="..\Data.Core\Data.Core.csproj" />
+    <ProjectReference Include="..\Data.Structures\Data.Structures.fsproj" />
+    <ProjectReference Include="..\DatabaseAccess.Core\DatabaseAccess.Core.csproj" />
+    <ProjectReference Include="..\DatabaseAccess.Loaders\DatabaseAccess.Loaders.fsproj" />
+    <ProjectReference Include="..\DatabaseAccess.Schema\DatabaseAccess.Schema.csproj" />
+    <ProjectReference Include="..\Model.Daily\Model.Daily.fsproj" />
+    <ProjectReference Include="..\Model.Hourly\Model.Hourly.fsproj" />
+    <ProjectReference Include="..\Model\Model.fsproj" />
+    <ProjectReference Include="..\Settings\Settings.fsproj" />
+    <ProjectReference Include="..\Core.Time\Core.Time.fsproj" />
+    <ProjectReference Include="..\Core.Collections\Core.Collections.fsproj" />
+  </ItemGroup>
+  <Import Project="..\.paket\Paket.Restore.targets" />
+</Project>

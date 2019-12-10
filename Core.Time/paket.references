@@ -1,0 +1,9 @@
+FSharp.Core
+GasDay.IO
+microsoft.net.test.sdk
+NodaTime
+nunit
+NUnit.Console
+nunit3TestAdapter
+unquote
+system.valueTuple

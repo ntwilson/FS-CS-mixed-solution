@@ -1,0 +1,12 @@
+FSharp.Core
+MathNet.Numerics
+MathNet.Numerics.FSharp
+microsoft.net.test.sdk
+nunit
+NUnit.Console
+nunit3TestAdapter
+SafetyFirst
+unquote
+system.valueTuple
+Linqed
+FSharpx.Extras

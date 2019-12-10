@@ -1,0 +1,12 @@
+FsCheck
+FSharp.Core
+LanguageExt.Core
+LanguageExt.FSharp
+microsoft.net.test.sdk
+newtonsoft.json
+NodaTime
+nunit
+NUnit.Console
+nunit3TestAdapter
+unquote
+system.valueTuple

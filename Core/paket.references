@@ -1,0 +1,14 @@
+ExcelDataReader
+FSharp.Core
+GasDay.IO
+Ifp.PatternMatching
+LanguageExt.Core
+LanguageExt.FSharp
+Linqed
+microsoft.net.test.sdk
+moq
+mstest.TestAdapter
+mstest.TestFramework
+newtonsoft.json
+NodaTime
+system.valueTuple

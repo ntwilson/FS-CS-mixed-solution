@@ -1,0 +1,9 @@
+Ifp.PatternMatching
+LanguageExt.Core
+Linqed
+microsoft.net.test.sdk
+moq
+mstest.TestAdapter
+mstest.TestFramework
+newtonsoft.json
+system.valueTuple

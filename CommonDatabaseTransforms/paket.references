@@ -1,0 +1,16 @@
+FSharp.Core
+System.ValueTuple
+NUnit.Console
+NUnit.ConsoleRunner
+NUnit.Extension.NUnitProjectLoader
+NUnit.Extension.NUnitV2Driver
+NUnit.Extension.NUnitV2ResultWriter
+NUnit.Extension.TeamCityEventListener
+NUnit.Extension.VSProjectLoader
+Microsoft.TestPlatform.TestHost
+Microsoft.CodeCoverage
+NUnit
+Microsoft.Net.Test.Sdk
+nunit3TestAdapter
+Unquote
+NodaTime

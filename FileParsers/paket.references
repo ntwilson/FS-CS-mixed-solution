@@ -1,0 +1,10 @@
+FSharp.Core
+LanguageExt.Core
+microsoft.net.test.sdk
+moq
+NodaTime
+nunit
+NUnit.Console
+nunit3TestAdapter
+unquote
+system.valueTuple
