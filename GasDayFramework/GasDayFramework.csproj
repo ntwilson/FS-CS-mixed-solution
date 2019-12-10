@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net471</TargetFramework>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <VS_INSTALL_DIR Condition=" '$(VS_INSTALL_DIR)' == '' ">C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional</VS_INSTALL_DIR>
+    <VS_INSTALL_DIR Condition=" '$(VS_INSTALL_DIR)' == '' ">C:\Program Files (x86)\Microsoft Visual Studio\2019\Community</VS_INSTALL_DIR>
     <LangVersion>8.0</LangVersion>
     <NullableContextOptions>enable</NullableContextOptions>
     <!-- NullableContextOptions was renamed to Nullable, and as of 2019-07-30, dotnet build supports one and Visual Studio supports the other.  

@@ -2,7 +2,6 @@ FsCheck
 FSharp.Core
 FSharp.Collections.ParallelSeq
 fsharpx.extras
-GasDay.IO
 LanguageExt.Core
 MathNet.Numerics
 MathNet.Numerics.FSharp

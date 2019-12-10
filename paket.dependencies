@@ -1,7 +1,6 @@
 strategy: min
 
 source https://api.nuget.org/v3/index.json
-source http://teamcity02.ad.mea.energy/guestAuth/app/nuget/feed/GasDayIO/GasDayIO/v2
 
 nuget FSharp.Collections.ParallelSeq
 nuget Microsoft.SqlServer.SqlManagementObjects
@@ -12,7 +11,6 @@ nuget FsCheck 2.10.4
 nuget FSharp.Core >= 4.6.2
 nuget fsharpx.collections 1.17.0
 nuget fsharpx.extras 2.2.1
-nuget GasDay.IO
 nuget Ifp.PatternMatching 1.0.0
 nuget LanguageExt.Core 1.9.2
 nuget LanguageExt.FSharp 1.9.2

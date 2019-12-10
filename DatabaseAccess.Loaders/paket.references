@@ -2,7 +2,6 @@ EntityFramework
 FsCheck
 FSharp.Core
 fsharpx.extras
-GasDay.IO
 LanguageExt.Core
 microsoft.net.test.sdk
 Moq
